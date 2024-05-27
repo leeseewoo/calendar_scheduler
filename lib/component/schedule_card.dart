@@ -35,14 +35,14 @@ class ScheduleCard extends StatelessWidget {
                 // 시작과 종료 시간을 보여줄 위젯
                 startTime: startTime, endTime: endTime,
               ),
-              const SizedBox(
+              SizedBox(
                 width: 16.0,
               ),
               _Content(
                 // 일정 내용을 보여줄 위젯
                 content: content,
               ),
-              const SizedBox(
+              SizedBox(
                 width: 16.0,
               )
             ],
@@ -57,7 +57,7 @@ class _Time extends StatelessWidget {
   final int startTime; // 시작시간
   final int endTime; // 종료시간
 
-  const _Time({
+  _Time({
     required this.startTime,
     required this.endTime,
   });
@@ -94,7 +94,7 @@ class _Time extends StatelessWidget {
 class _Content extends StatelessWidget {
   final String content; // 내용
 
-  const _Content({
+  _Content({
     required this.content,
   });
 

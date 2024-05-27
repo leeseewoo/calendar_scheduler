@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // BottomSheet의 높이를 화면의 최대 높이로 정의하고, 스크롤 가능하게 변경
           );
         },
-        child: const Icon(
+        child: Icon(
           Icons.add,
         ),
       ),
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           GetIt.I<LocalDatabase>().removeSchedule(schedule.id);
                         },
                         child: Padding(
-                          padding: const EdgeInsets.only(
+                          padding: EdgeInsets.only(
                               bottom: 8.0, left: 8.0, right: 8.0),
                           child: ScheduleCard(
                             startTime: schedule.startTime,
