@@ -33,7 +33,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
             child: Column(
               //시간 관련 텍스트 필드와 내용 관련 텍스트 필드 세로로 배치
               children: [
-                const Row(
+                Row(
                   // 시작시간, 종료 시간 가로로 배치
                   children: [
                     Expanded(
@@ -61,10 +61,10 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                     ),
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 8.0,
                 ),
-                const Expanded(
+                Expanded(
                   child: CustomTextField(
                     label: '내용',
                     isTime: false,
