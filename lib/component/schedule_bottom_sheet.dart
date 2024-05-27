@@ -2,8 +2,18 @@ import 'package:calendar_scheduler/component/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:calendar_scheduler/const/colors.dart';
 
+import 'package:drift/drift.dart' hide Column;
+// material.dart 패키지의 Column 클래스와 중복되어 drift에서는 숨기기
+import 'package:get_it/get_it.dart';
+import 'package:calendar_scheduler/database/drift_database.dart';
+
 class ScheduleBottomSheet extends StatefulWidget {
-  const ScheduleBottomSheet({Key? key}) : super(key: key);
+  final DateTime selectedDate;   //  선택된 날짜 상위 위젯에서 입력받기
+
+  const ScheduleBottomSheet({
+    required this.selectedDate,
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<ScheduleBottomSheet> createState() => _ScheduleBottomSheetState();
@@ -92,13 +102,25 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
     );
   }
 
-  void onSavePressed() {
+  void onSavePressed() async {
     if ( formKey.currentState!.validate()) {
       formKey.currentState!.save();
 
-      print(startTime);
-      print(endTime);
-      print(content);
+      // print(startTime);
+      // print(endTime);
+      // print(content);
+      await GetIt.I<LocalDatabase>().createSchedule(
+        SchedulesCompanion(
+          startTime: Value(startTime!),
+          endTime: Value(endTime!),
+          content: Value(content!),
+          date: Value(widget.selectedDate),
+        ),
+      );
+
+      Navigator.of(context).pop();    // 일정 생성 후 화면 뒤로 가기
+
+
     }
   }
 
