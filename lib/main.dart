@@ -4,22 +4,31 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/date_symbol_data_local.dart' as intl;
 
+import 'package:calendar_scheduler/provider/schedule_provider.dart';
+import 'package:calendar_scheduler/repository/schedule_repository.dart';
+import 'package:provider/provider.dart';
+
 void main() async {
   // 플러터 프레임워크가 준비될 때까지 대기
   WidgetsFlutterBinding.ensureInitialized();
 
   await intl.initializeDateFormatting(); // intl 패키지 초기화(다국어화) 여기까지
 
-
-  final database = LocalDatabase();   // 데이터베이스 생성
+  final database = LocalDatabase(); // 데이터베이스 생성
 
   GetIt.I.registerSingleton<LocalDatabase>(database);
   // GetIt에 데이터베이스 변수 주입하기
 
+  final repository = ScheduleRepository();
+  final scheduleProvider = ScheduleProvider(repository: repository);
+
   // runApp(const MyApp());
   runApp(
-    const MaterialApp(
-      home: HomeScreen(),
+    ChangeNotifierProvider(
+      create: (_) => scheduleProvider,
+      child: MaterialApp(
+        home: HomeScreen(),
+      ),
     ),
   );
 }
