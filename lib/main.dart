@@ -8,27 +8,30 @@ import 'package:calendar_scheduler/provider/schedule_provider.dart';
 import 'package:calendar_scheduler/repository/schedule_repository.dart';
 import 'package:provider/provider.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:calendar_scheduler/firebase_options.dart';
+
+
 void main() async {
   // 플러터 프레임워크가 준비될 때까지 대기
   WidgetsFlutterBinding.ensureInitialized();
 
+  // firebase 프로젝트 설정 함수
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   await intl.initializeDateFormatting(); // intl 패키지 초기화(다국어화) 여기까지
 
-  final database = LocalDatabase(); // 데이터베이스 생성
 
-  GetIt.I.registerSingleton<LocalDatabase>(database);
-  // GetIt에 데이터베이스 변수 주입하기
 
-  final repository = ScheduleRepository();
-  final scheduleProvider = ScheduleProvider(repository: repository);
+
 
   // runApp(const MyApp());
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => scheduleProvider,
-      child: MaterialApp(
+    MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: HomeScreen(),
-      ),
     ),
   );
 }

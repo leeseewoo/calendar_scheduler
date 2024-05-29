@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "776173185408",
+    "firebase_url": "https://my-project-449b5-default-rtdb.firebaseio.com",
+    "project_id": "my-project-449b5",
+    "storage_bucket": "my-project-449b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776173185408:android:11cffc07f88dc41fb07965",
+        "android_client_info": {
+          "package_name": "com.flysonitstime.calendar_scheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHfP5Z0-XXYNWtkAZNWr1fCTCBpx3i6UA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776173185408:android:2eb92d09f9a7f778b07965",
+        "android_client_info": {
+          "package_name": "com.flysonitstime.modu_tour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHfP5Z0-XXYNWtkAZNWr1fCTCBpx3i6UA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
