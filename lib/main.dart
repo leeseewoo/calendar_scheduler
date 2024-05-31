@@ -1,4 +1,5 @@
 import 'package:calendar_scheduler/database/drift_database.dart';
+import 'package:calendar_scheduler/screen/auth_screen.dart';
 import 'package:calendar_scheduler/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -31,7 +32,7 @@ void main() async {
   runApp(
     MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        home: AuthScreen(),
     ),
   );
 }
