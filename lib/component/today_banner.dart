@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:calendar_scheduler/const/colors.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 
 class TodayBanner extends StatelessWidget {
@@ -37,6 +39,25 @@ class TodayBanner extends StatelessWidget {
                 '$count건', //일정 개수
                 style: textStyle,
               ),
+              const SizedBox(width: 8.0),
+              GestureDetector(
+                onTap: () async {
+
+                  // 구글 로그인/로그아웃
+                  await GoogleSignIn().signOut();
+
+                  // 파이어베이스 인증 로그아웃
+                  await FirebaseAuth.instance.signOut();
+
+                  // 홈 스크린으로 돌아가기
+                  Navigator.of(context).pop();
+                },
+                child: Icon(
+                  Icons.logout,
+                  size: 16.0,
+                  color: Colors.white,
+                ),
+              )
             ],
           ),
         ),

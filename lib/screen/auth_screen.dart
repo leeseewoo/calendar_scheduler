@@ -38,7 +38,7 @@ class AuthScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5.0)
                   ),
                 ),
-                child: Text('구글로 로그인!!!!!!!!!!!!!'),
+                child: Text('구글로 로그인!'),
             ),
           ],
         ),
