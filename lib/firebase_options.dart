@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBHfP5Z0-XXYNWtkAZNWr1fCTCBpx3i6UA',
-    appId: '1:776173185408:android:11cffc07f88dc41fb07965',
+    appId: '1:776173185408:android:ab68af551ebb50bbb07965',
     messagingSenderId: '776173185408',
     projectId: 'my-project-449b5',
     databaseURL: 'https://my-project-449b5-default-rtdb.firebaseio.com',
@@ -65,6 +65,9 @@ class DefaultFirebaseOptions {
     projectId: 'my-project-449b5',
     databaseURL: 'https://my-project-449b5-default-rtdb.firebaseio.com',
     storageBucket: 'my-project-449b5.appspot.com',
+    androidClientId: '776173185408-8mnac90s6oer4hthsrijv7jgq0hot39c.apps.googleusercontent.com',
+    iosClientId: '776173185408-0snhahrfas253ueia618gps8gl0dedvq.apps.googleusercontent.com',
     iosBundleId: 'com.flysonitstime.calendarScheduler',
   );
+
 }

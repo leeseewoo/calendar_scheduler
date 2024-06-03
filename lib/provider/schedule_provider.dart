@@ -2,7 +2,6 @@ import 'package:calendar_scheduler/model/schedule_model.dart';
 import 'package:calendar_scheduler/repository/schedule_repository.dart';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'package:uuid/uuid.dart';
 
@@ -37,7 +36,7 @@ class ScheduleProvider extends ChangeNotifier {
   }) async {
     final targetDate = schedule.date;
 
-    final uuid = Uuid();
+    const uuid = Uuid();
 
     final tempId = uuid.v4(); // 유일한 ID값을 생성합니다.
     final newSchedule = schedule.copyWith(

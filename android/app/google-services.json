@@ -8,14 +8,14 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776173185408:android:11cffc07f88dc41fb07965",
+        "mobilesdk_app_id": "1:776173185408:android:ab68af551ebb50bbb07965",
         "android_client_info": {
-          "package_name": "com.flysonitstime.calendar_scheduler"
+          "package_name": "com.flysonitstime.calendar_schdeuler"
         }
       },
       "oauth_client": [
         {
-          "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+          "client_id": "776173185408-1rtmt0sevs0dbbm961dr1r59k6i82qa4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -28,8 +28,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+              "client_id": "776173185408-1rtmt0sevs0dbbm961dr1r59k6i82qa4.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "776173185408-0snhahrfas253ueia618gps8gl0dedvq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flysonitstime.calendarScheduler"
+              }
             }
           ]
         }
@@ -37,14 +44,22 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776173185408:android:2eb92d09f9a7f778b07965",
+        "mobilesdk_app_id": "1:776173185408:android:11cffc07f88dc41fb07965",
         "android_client_info": {
-          "package_name": "com.flysonitstime.modu_tour"
+          "package_name": "com.flysonitstime.calendar_scheduler"
         }
       },
       "oauth_client": [
         {
-          "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+          "client_id": "776173185408-8mnac90s6oer4hthsrijv7jgq0hot39c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flysonitstime.calendar_scheduler",
+            "certificate_hash": "5b7789512dc0d277204f146fca917fb9bf5ef710"
+          }
+        },
+        {
+          "client_id": "776173185408-1rtmt0sevs0dbbm961dr1r59k6i82qa4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -57,8 +72,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "776173185408-7svqbg3fm947e19dpki0kgnrfscslqrd.apps.googleusercontent.com",
+              "client_id": "776173185408-1rtmt0sevs0dbbm961dr1r59k6i82qa4.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "776173185408-0snhahrfas253ueia618gps8gl0dedvq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flysonitstime.calendarScheduler"
+              }
             }
           ]
         }

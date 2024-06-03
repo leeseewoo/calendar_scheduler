@@ -2,10 +2,7 @@ import 'package:calendar_scheduler/component/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:calendar_scheduler/const/colors.dart';
 
-import 'package:drift/drift.dart' hide Column;
 // material.dart 패키지의 Column 클래스와 중복되어 drift에서는 숨기기
-import 'package:get_it/get_it.dart';
-import 'package:calendar_scheduler/database/drift_database.dart';
 
 import 'package:calendar_scheduler/model/schedule_model.dart';
 //import 'package:provider/provider.dart';
@@ -19,8 +16,8 @@ class ScheduleBottomSheet extends StatefulWidget {
 
   const ScheduleBottomSheet({
     required this.selectedDate,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<ScheduleBottomSheet> createState() => _ScheduleBottomSheetState();
@@ -63,7 +60,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                         validator: timeValidator,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16.0,
                     ),
                     Expanded(
@@ -78,7 +75,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8.0,
                 ),
                 Expanded(
@@ -127,7 +124,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
 
       // Schedule 모델 생성하기
       final schedule = ScheduleModel(
-        id: Uuid().v4(),
+        id: const Uuid().v4(),
         content: content!,
         date: widget.selectedDate,
         startTime: startTime!,
@@ -167,7 +164,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
   } // 시간값 검증
 
   String? contentValidator(String? val) {
-    if (val == null || val.length == 0) {
+    if (val == null || val.isEmpty) {
       return '값을 입력해주세요';
     }
 

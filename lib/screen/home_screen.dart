@@ -4,18 +4,14 @@ import 'package:calendar_scheduler/component/schedule_card.dart';
 import 'package:calendar_scheduler/component/today_banner.dart';
 import 'package:calendar_scheduler/const/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get_it/get_it.dart';
-import 'package:calendar_scheduler/database/drift_database.dart';
-import 'package:path/path.dart';
 
-import 'package:provider/provider.dart';
-import 'package:calendar_scheduler/provider/schedule_provider.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:calendar_scheduler/model/schedule_model.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -51,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         },
-        child: Icon(
+        child: const Icon(
           Icons.add,
         ),
       ),
@@ -65,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onDaySelected: (selectedDate, focusedDate) =>
                   onDaySelected(selectedDate, focusedDate, context),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             StreamBuilder<QuerySnapshot>(
@@ -86,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Expanded(
@@ -106,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 builder: (context, snapshot) {
                   // Stream을 가져오는 동안 에러가 났을 때 보여줄 화면
                   if (snapshot.hasError) {
-                    return Center(
+                    return const Center(
                       child: Text('일정 정보를 가져오지 못했습니다.'),
                     );
                   }
@@ -139,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               .delete();
                         },
                         child: Padding(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               bottom: 8.0, left: 8.0, right: 8.0),
                           child: ScheduleCard(
                             startTime: schedule.startTime,
